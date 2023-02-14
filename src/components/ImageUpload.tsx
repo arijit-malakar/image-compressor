@@ -16,12 +16,36 @@ const ImageUpload: React.FC = () => {
   };
 
   return (
-    <div className="block py-4">
-      <div className="flex justify-center pb-4">
+    <>
+      <div className="relative w-max my-4 ml-auto mr-auto">
+        <label
+          title="Click to upload"
+          htmlFor="imageUpload"
+          className="cursor-pointer flex items-center gap-4 px-6 py-4 before:border-blue-500 hover:before:border-blue-700 group before:absolute before:inset-0 before:rounded-3xl before:border before:border-dashed before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+        >
+          <div className="w-max relative">
+            <img
+              className="w-12"
+              src="images/upload.webp"
+              alt="file upload icon"
+              loading="lazy"
+              width="512"
+              height="512"
+            />
+          </div>
+          <div className="relative">
+            <span className="block text-base font-semibold relative text-blue-900 group-hover:text-blue-500">
+              Upload a file
+            </span>
+          </div>
+        </label>
         <input
+          hidden
           type="file"
           accept="image/*"
           onChange={handleChange}
+          name="imageUpload"
+          id="imageUpload"
           className="text-sm text-slate-500
           file:mr-4 
           file:py-2
@@ -65,7 +89,7 @@ const ImageUpload: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
