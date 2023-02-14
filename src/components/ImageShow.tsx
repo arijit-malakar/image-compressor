@@ -13,7 +13,7 @@ const ImageShow: React.FC<ImageShowProps> = ({ image }) => {
   return (
     <div className="block py-4 w-full">
       <div className="flex justify-center">
-        <div className="rounded-lg shadow-lg bg-white max-w-sm">
+        <div className="rounded-lg shadow-lg bg-white max-w-sm mb-4">
           <img src={image} className="max-w-full h-auto" alt="Uploaded pic" />
         </div>
       </div>
